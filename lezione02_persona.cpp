@@ -57,4 +57,6 @@ int main() {
 	
 	Oratore o1("Cicerone", 2000);
 	o1.parla();
+	
+	std::cout << "Modifica a caso" << std::endl;
 }
