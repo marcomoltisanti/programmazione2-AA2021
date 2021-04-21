@@ -1,0 +1,12 @@
+Definire una gerarchia di classi che rappresenta le forme geometriche.
+
+Tutte le forme geometriche devono essere in grado di calcolare il perimetro e l'area.
+Le forme geometriche si dividono in curve e poligoni.
+Le curve sono caratterizzate dalla presenza di un centro e dalla lunghezza dei semiassi maggiore e minore.
+I poligoni sono caratterizzati dal numero di lati.
+
+Tra le curve possiamo trovare le ellissi e i cerchi.
+Tra i poligoni possiamo trovare triangoli, rettangoli, trapezi e quadrati.
+
+Ogni forma dovrà essere in grado di fornire una descrizione di se stessa in forma di stringa.
+Ogni forma dovrà poter essere stampata sulla console utilizzando il membro cout di std.
