@@ -1,4 +1,4 @@
-# Lezione 1/2/3 - 07-12-14/04/21
+# Argomenti del corso
 ## Principi della Programmazione a Oggetti
 * Astrazione
 * Incapsulamento e Information Hiding
@@ -17,3 +17,4 @@
 	* Gerarchie di classi
 	* Utilizzo dei modificatori di accesso
 	* Overload di metodi
+	* Classi astratte, funzioni `virtual` e `pure virtual`
