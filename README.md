@@ -12,7 +12,9 @@
 	* Costruttore "standard"
 	* Liste di inizializzazione
 	* Overload dei costruttori
-	* Costruttori **explicit**
+	* Costruttori `explicit`
+	* Utilizzo della keyword `friend`
+	* Overload degli operatori con utilizzo di `friend`
 * Ereditarietà e Polimorfismo
 	* Gerarchie di classi
 	* Utilizzo dei modificatori di accesso
