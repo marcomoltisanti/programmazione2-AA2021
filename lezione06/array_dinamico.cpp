@@ -84,6 +84,30 @@ class ArrayDinamico {
 		}
 		
 	}
+	
+	int &operator[](int i) {
+		if(i>=0 && i < numeroElementi) {
+			return array[i];
+		}
+		
+		cout << "Errore: l'indice " << i << " non è corretto" << endl;
+		
+		exit(0);
+		
+		//ad[0] = 90;
+	}
+	
+	int &operator[](int i) const {
+		if(i>=0 && i < numeroElementi) {
+			return array[i];
+		}
+		
+		cout << "Errore: l'indice " << i << " non è corretto" << endl;
+		
+		exit(0);
+		
+		//int a = ad[0];
+	}
 };
 
 int main() {
@@ -95,8 +119,8 @@ int main() {
 	
 	ad.print();
 	
-	ad.inserisci(1000);
-	ad.inserisci(1001);
+	ad.inserisci(2);
+	ad.inserisci(3);
 	
 	ad.print();
 	
@@ -117,5 +141,9 @@ int main() {
 	int c = 9 / 2;
 	cout << "9/2 = " << c << endl;
 	
+	cout << "elemento in posizione 0 = " << ad[0] << endl;
+	cout << "elemento in posizione 100 = " << ad[100] << endl;
 	
+	ad[3] = 100;
+	ad.print();
 }
