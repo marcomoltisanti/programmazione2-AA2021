@@ -1,0 +1,7 @@
+Si implementi un programma che rappresenti una gerarchia di veicoli.
+Ogni veicolo ha un numero di ruote, un tipo di carburante, una motorizzazione,
+una velocità massima, una marca ed un prezzo.
+Tra i veicoli distinguiamo motocicli, automobili, camion, mezzi speciali.
+
+Si simuli una gara tra 10 veicoli di tipo diverso, riportando 
+posizioni iniziali, sorpassi e classifica finale.
