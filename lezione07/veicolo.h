@@ -1,3 +1,6 @@
+#ifndef VEICOLO_H //verificare che l'header dichiarato qui non sia definito
+#define VEICOLO_H //lo definiamo
+
 #include <iostream>
 
 class Veicolo {
@@ -11,7 +14,8 @@ class Veicolo {
 		std::string motorizzazione;
 	
 	public:
-		Veicolo() {}
+		Veicolo(int numeroRuote, int velocitaMassima, double prezzo, std::string marca, std::string carburante, std::string motorizzazione) : numeroRuote(numeroRuote), velocitaMassima(velocitaMassima), velocita(0), prezzo(prezzo), marca(marca), carburante(carburante), motorizzazione(motorizzazione) {}
+		
 		
 		int getNumeroRuote() {
 			return numeroRuote;
@@ -65,5 +69,23 @@ class Veicolo {
 			motorizzazione = s;
 		}
 		
+		void accelera() {
+			if(velocita < velocitaMassima)
+				velocita++;
+		}
 		
-}
+		void decelera() {
+			if(velocita > 0) 
+				velocita--;
+		}
+		
+		virtual std::string toString() const = 0;
+		
+		
+		friend std::ostream& operator<<(std::ostream& out, const Veicolo& v) {
+			out << v.toString();
+			return out;
+		}
+};
+
+#endif
