@@ -86,6 +86,15 @@ class Veicolo {
 			out << v.toString();
 			return out;
 		}
+		
+		void operator=(const Veicolo& v) {
+			this->numeroRuote = v.numeroRuote;
+			this->velocitaMassima = v.velocitaMassima;
+			this->motorizzazione = v.motorizzazione;
+			this->carburante = v.carburante;
+			this->marca = v.marca;
+			this->prezzo = v.prezzo;
+		}
 };
 
 #endif
