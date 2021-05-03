@@ -35,7 +35,7 @@ void Gara::aggiungiPartecipante(Veicolo& v) {
 	//C. aggiungo un attributo alla classe
 	//D. vado al mare
 	//std::cout << "Riga 37 file Gara - metodo aggiungiPartecipante" << std::endl;
-	*veicoli[numeroIscritti++] = v;
+	veicoli[numeroIscritti++] = &v;
 }
 
 
