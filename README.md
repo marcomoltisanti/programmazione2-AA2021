@@ -14,9 +14,10 @@
 	* Overload dei costruttori
 	* Costruttori `explicit`
 	* Utilizzo della keyword `friend`
-	* Overload degli operatori con utilizzo di `friend`
 * Ereditarietà e Polimorfismo
 	* Gerarchie di classi
 	* Utilizzo dei modificatori di accesso
 	* Overload di metodi
 	* Classi astratte, funzioni `virtual` e `pure virtual`
+	* Overload degli operatori con utilizzo di `friend`
+* Classi template
