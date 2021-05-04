@@ -21,13 +21,21 @@ int main() {
 	std::cout << std::endl;
 	
 	
-	Moto m(120, 10000, "Ducati", "1000cc");
-	Auto a(160, 8000, "Fiat Punto", "diesel", "1.300 MTJ");
-	std::cout << m << std::endl;
-	std::cout << a << std::endl;
+	Moto m0(100, 10000, "Ducati", "1000cc");
+	Moto m1(110, 10000, "Honda", "1000cc");
+	Moto m2(120, 10000, "Yamaha", "1000cc");
+	Auto a0(90, 8000, "Fiat Punto", "diesel", "1.300 MTJ");
+	Auto a1(130, 8000, "Fiat Fiorino", "diesel", "1.300 MTJ");
+	Auto a2(140, 8000, "Fiat Panda", "diesel", "1.300 MTJ");
+	//std::cout << m << std::endl;
+	//std::cout << a << std::endl;
 	
 	Gara gara(10, 10);
-	gara.aggiungiPartecipante(m);
-	gara.aggiungiPartecipante(a);
+	gara.aggiungiPartecipante(m0);
+	gara.aggiungiPartecipante(m1);
+	gara.aggiungiPartecipante(m2);
+	gara.aggiungiPartecipante(a0);
+	gara.aggiungiPartecipante(a1);
+	gara.aggiungiPartecipante(a2);
 	gara.partenza();
 }

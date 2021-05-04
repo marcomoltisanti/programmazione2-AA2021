@@ -24,6 +24,7 @@ class Gara {
 	void partenza();
 	void stampaClassifica();
 	void aggiungiPartecipante(Veicolo& v);
+	void bubblesort();
 };
 
 #endif
@@ -36,6 +37,18 @@ void Gara::aggiungiPartecipante(Veicolo& v) {
 	//D. vado al mare
 	//std::cout << "Riga 37 file Gara - metodo aggiungiPartecipante" << std::endl;
 	veicoli[numeroIscritti++] = &v;
+}
+
+void Gara::bubblesort() {
+	for(int i=0; i < numeroIscritti; i++) {
+		for(int j=i+1; j < numeroIscritti; j++) {
+			if(*veicoli[i] < *veicoli[j]) {
+				Veicolo *tmp = veicoli[i];
+				veicoli[i] = veicoli[j];
+				veicoli[j] = tmp;
+			}
+		}
+	}
 }
 
 
@@ -52,10 +65,12 @@ void Gara::controlla(int t) {
 		//e verificare chi è più avanti
 		//RICERCA se vogliamo solo trovare il massimo
 		//ORDINAMENTO se vogliamo la classifica completo
-		if(veicoli[i]->getVelocita() > massimo_temporaneo) {
+		/*if(veicoli[i]->getVelocita() > massimo_temporaneo) {
 			massimo_temporaneo = veicoli[i]->getVelocita();
 			indice_massimo = i;
 		}
+		*/
+		Gara::bubblesort();
 	}
 	
 	std::cout << "Il veicolo più veloce è " << *veicoli[indice_massimo] << " e ha velocità " << massimo_temporaneo << std::endl;
@@ -64,7 +79,7 @@ void Gara::controlla(int t) {
 }
 
 void Gara::partenza() {
-	srand(42);
+	srand(12);
 	for(int i=0; i < durata; i++) {
 		for(int j=0; j < numeroIscritti; j++) {
 			
@@ -84,5 +99,10 @@ void Gara::partenza() {
 }
 
 void Gara::stampaClassifica() {
-	std::cout << "Da stampare dopo aver implementato l'ordinamento" << std::endl;
+	std::cout << "Classifica" << std::endl;
+	for(int i=0; i<numeroIscritti; i++) {
+		std::cout << "#" << i << ": " << *veicoli[i] << std::endl;
+	}
+	
+	//std::cout << "Da stampare dopo aver implementato l'ordinamento" << std::endl;
 }

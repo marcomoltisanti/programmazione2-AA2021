@@ -95,6 +95,18 @@ class Veicolo {
 			this->marca = v.marca;
 			this->prezzo = v.prezzo;
 		}
+		
+		bool operator<(const Veicolo& v) {
+			return this->velocita < v.velocita;
+		}
+		
+		bool operator>(const Veicolo& v) {
+			return this->velocita > v.velocita;
+		}
+		
+		bool operator==(const Veicolo& v) {
+			return this->velocita == v.velocita;
+		}
 };
 
 #endif
