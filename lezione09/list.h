@@ -35,32 +35,54 @@ class List {
 		this->insert(temp);
 	}
 
-	void insertInOrder(T value) {
+	void insertInOrder(T value, bool ascend) {
 		Node<T> * temp = new Node<T>(value);
 		if(head == NULL) {
 			this->insert(temp);
 			return;
 		}
-		if(head->getValue() >= value) {
-			temp->setNext(head);
-			head = temp;
-			length++;
-			return;
+		if(ascend) {
+			if(head->getValue() >= value) {
+				temp->setNext(head);
+				head = temp;
+				length++;
+				return;
+			}
+		} else {
+			if(head->getValue() < value) {
+				temp->setNext(head);
+				head = temp;
+				length++;
+				return;
+			}
 		}
 
 		Node<T> * prev = head;
 	       	Node<T>	* current = head->getNext();
 
 		while(current != NULL) {
-			if(prev->getValue() < value && current->getValue() >= value) {
-				prev->setNext(temp);
-				temp->setNext(current);
-				length++;
-				return;
-			}
-			else {
-				prev = current; 
-				current = current->getNext();
+			if(ascend) {
+				if(prev->getValue() < value && current->getValue() >= value) {
+					prev->setNext(temp);
+					temp->setNext(current);
+					length++;
+					return;
+				}
+				else {
+					prev = current; 
+					current = current->getNext();
+				}
+			} else {
+				if(prev->getValue() >= value && current->getValue() < value) {
+					prev->setNext(temp);
+					temp->setNext(current);
+					length++;
+					return;
+				}
+				else {
+					prev = current; 
+					current = current->getNext();
+				}
 			}
 		}
 

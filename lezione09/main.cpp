@@ -32,19 +32,20 @@ int main() {
 	//n1.setNext(&n0);
 	
 	cout << n1.toString() << endl;
-	
+	bool ascend = true;
 	List<int> list;
-	list.insertInOrder(9);
+
+	list.insertInOrder(9, ascend);
 	cout << list << endl;
-	list.insertInOrder(3);
+	list.insertInOrder(3, ascend);
 	cout << list << endl;
-	list.insertInOrder(5);
+	list.insertInOrder(5, ascend);
 	cout << list << endl;
-	list.insertInOrder(19);
+	list.insertInOrder(19, ascend);
 	cout << list << endl;
-	list.insertInOrder(7);
+	list.insertInOrder(7, ascend);
 	cout << list << endl;
-	list.insertInOrder(42);
+	list.insertInOrder(42, ascend);
 	cout << list << endl;
 	Node<int> * d1 = list.deleteNode(5);
 	cout << list << endl;
@@ -54,12 +55,12 @@ int main() {
 	cout << list << endl;
 
 	List<Studente> list2;
-	list2.insertInOrder(s1);	
+	list2.insertInOrder(s1, !ascend);	
 	cout << list2 << endl;
-	list2.insertInOrder(s2);	
+	list2.insertInOrder(s2, !ascend);	
 	cout << list2 << endl;
-	list2.insertInOrder(s3);	
+	list2.insertInOrder(s3, !ascend);	
 	cout << list2 << endl;
-	list2.insertInOrder(s4);	
+	list2.insertInOrder(s4, !ascend);	
 	cout << list2 << endl;
 }
