@@ -12,13 +12,15 @@ class NodeDL {
 	NodeDL<T> * prev;
 	NodeDL<T> * next;
 
-	int compareTo(NodeDL<T>& const n) const {
+	int compareTo(const NodeDL<T>& n) const {
 		if(this->value < n.value) 
 			return -1;
 		if(this->value == n.value)
 			return 0;
 		if(this->value > n.value) 
 			return 1;
+
+		return 0;
 	}
 
 	public:
@@ -66,6 +68,6 @@ class NodeDL {
 		return this->compareTo(n) == 0;
 	}
 
-
-
 };
+
+#endif
