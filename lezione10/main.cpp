@@ -24,4 +24,12 @@ int main() {
 	list.insert(42);
 
 	cout << list << endl;
+
+	list.deleteValue(9);
+	cout << list << endl;
+	list.deleteValue(3);
+	cout << list << endl;
+	list.deleteValue(42);
+
+	cout << list << endl;
 }
