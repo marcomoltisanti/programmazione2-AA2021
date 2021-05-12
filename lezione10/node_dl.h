@@ -8,9 +8,9 @@ using namespace std;
 
 template<class T>
 class NodeDL {
-	T value;
-	NodeDL<T> * prev;
-	NodeDL<T> * next;
+		T value;
+		NodeDL<T> * prev;
+		NodeDL<T> * next;
 
 	int compareTo(const NodeDL<T>& n) const {
 		if(this->value < n.value) 
