@@ -74,7 +74,7 @@ class ListDLS {
 
 	void insert(T value) {
 
-		if((ascend && (value < head->getValue())) || (!ascend && (value >= head->getValue()))) {
+		if(this->isEmpty() || (ascend && (value < head->getValue())) || (!ascend && (value >= head->getValue()))) {
 			cout << "insert head" << endl;
 			this->insertHead(value);
 			return;
@@ -91,7 +91,7 @@ class ListDLS {
 
 		if(ascend) {
 			cout << "insert ascend" << endl;
-			while((*cur < *n) && cur->getNext() != nil) {
+			while((*cur < *n) && cur != nil) {
 				cur = cur->getNext();
 			}
 			cout << *cur << endl;
@@ -121,7 +121,7 @@ class ListDLS {
 
 		head->getNext()->setPrev(nil);
 		nil->setNext(head->getNext());
-		Node<T> * tmp = head;
+		NodeDL<T> * tmp = head;
 		head = head->getNext();
 
 		length--;
@@ -136,7 +136,7 @@ class ListDLS {
 		
 		tail->getPrev()->setNext(nil);
 		nil->setPrev(tail->getPrev());
-		Node<T> * tmp = tail;
+		NodeDL<T> * tmp = tail;
 		tail = tail->getPrev();
 
 		length--;
@@ -145,10 +145,10 @@ class ListDLS {
 	}
 
 	NodeDL<T> * search(T value) {
-		Node<T> * tmp = new NodeDL<T>(value);
+		NodeDL<T> * tmp = new NodeDL<T>(value);
 		if((ascend && (*tmp < *head)) || (!ascend && (*tmp < *tail)) || (ascend && (*tmp >= *tail)) || (!ascend && (*tmp >= *head)))
 			return NULL;
-		Node<T> * cur = head;
+		NodeDL<T> * cur = head;
 		while(*cur != *tmp && cur != nil)
 			cur = cur->getNext();
 		if(cur == nil)
