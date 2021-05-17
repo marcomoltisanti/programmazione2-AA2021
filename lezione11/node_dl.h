@@ -28,7 +28,7 @@ class NodeDL {
 	NodeDL(T value, NodeDL<T> *prev, NodeDL<T> *next):
 		value(value), prev(prev), next(next) {}
 	NodeDL(T value) : NodeDL(value, NULL, NULL) {}
-	NodeDL() : NodeDL(NULL, NULL, NULL) {}
+	NodeDL() : NodeDL(0, NULL, NULL) {}
 
 	void setValue(T value) { this->value = value; }
 	void setPrev(NodeDL<T> *prev) { this->prev = prev; }
