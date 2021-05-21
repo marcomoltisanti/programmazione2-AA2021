@@ -25,7 +25,7 @@ Tra i requisiti, si nota che:
 
 Si decide, pertanto, di utilizzare una **Lista Doppiamente Linkata** con un riferimento alla testa e un riferimento alla coda.
 
-##Classi utilizzate
+## Classi utilizzate
 
 + `Player`: classe che modella il giocatore.
 	- Overload della redirezione dell'input. Utilizzando la redirezione e la funzione `std::getline` si gestisce correttamente la separazione tra i campi, che avviene con il carattere ';' invece del classico spazio.
