@@ -21,3 +21,5 @@
 	* Classi astratte, funzioni `virtual` e `pure virtual`
 	* Overload degli operatori con utilizzo di `friend`
 * Classi template
+
+Questo è un aggiornamento del 07 marzo 2022
